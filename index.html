@@ -15,7 +15,40 @@
 
 <body>
 	<header>
+		<nav class="mobile">
+			<button class="mobile__btn">
+				<img src="./images/icon-menu.svg" alt="Open navigation links menu" class="mobile__btn--menu">
+				<img src="./images/icon-close.svg" alt="Close navigation links menu" class="mobile__btn--close">
+			</button>
+			<ul class="mobile__links">
+				<li><a href="#">Collections</a></li>
+				<li><a href="#">Men</a></li>
+				<li><a href="#">Women</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<img src="./images/logo.svg" alt="Sneakers, website logo" class="logo">
+		<nav class="desktop">
+			<a href="#">Collections</a>
+			<a href="#">Men</a>
+			<a href="#">Women</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+		</nav>
+		<button class="cart">
+			<img src="./images/icon-cart.svg" alt="Cart icon" class="cart__icon">
+			<span class="cart__goods"></span>
+		</button>
+		<button class="avatar">
+			<img src="./images/image-avatar.png" alt="" class="avatar__img">
+		</button>
 
+		<div class="cart-container">
+			<p class="cart-container__title">Cart</p>
+			<div class="cart-container__storage"></div>
+			<button class="cart-container__checkout">Checkout</button>
+		</div>
 	</header>
 	<main>
 		<section>
