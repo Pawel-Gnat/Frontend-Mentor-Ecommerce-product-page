@@ -1,0 +1,59 @@
+header {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	height: 7rem;
+	padding: 2rem;
+}
+
+.mobile {
+	&__btn {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+		border: none;
+		background-color: transparent;
+
+		&--close {
+			display: none;
+		}
+	}
+
+	&__links {
+		display: none;
+	}
+}
+
+.desktop {
+	display: none;
+}
+
+.cart {
+	padding: 1rem;
+	margin-left: auto;
+	border: none;
+	background-color: transparent;
+
+	&__icon {
+		display: block;
+	}
+}
+
+.avatar {
+	padding: 1rem;
+	border: none;
+	background-color: transparent;
+
+	&__img {
+		display: block;
+		height: 2.2rem;
+		width: auto;
+	}
+}
+
+.cart-container {
+	display: none;
+}
+
+@media (min-width: 420px) {
+}

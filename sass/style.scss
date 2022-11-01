@@ -1,12 +1,13 @@
 /* VARIABLES */
-@import './colors';
-@import './header';
+@import './abstracts/colors';
+@import './layout/header';
 
 /* SITE */
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 }
 
 html {
