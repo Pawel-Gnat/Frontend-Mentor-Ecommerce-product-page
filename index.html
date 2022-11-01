@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Frontend Mentor Ecommerce product page</title>
-	<link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
 	<header>
 		<nav class="mobile">
 			<button class="mobile__btn">
-				<img src="./images/icon-menu.svg" alt="Open navigation links menu" class="mobile__btn--menu">
-				<img src="./images/icon-close.svg" alt="Close navigation links menu" class="mobile__btn--close">
+				<img src="./images/icons/icon-menu.svg" alt="Open navigation links menu" class="mobile__btn--menu">
+				<img src="./images/icons/icon-close.svg" alt="Close navigation links menu" class="mobile__btn--close">
 			</button>
 			<ul class="mobile__links">
 				<li><a href="#">Collections</a></li>
@@ -28,7 +28,7 @@
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
-		<img src="./images/logo.svg" alt="Sneakers, website logo" class="logo">
+		<img src="./images/icons/logo.svg" alt="Sneakers, website logo" class="logo">
 		<nav class="desktop">
 			<a href="#">Collections</a>
 			<a href="#">Men</a>
@@ -37,11 +37,11 @@
 			<a href="#">Contact</a>
 		</nav>
 		<button class="cart">
-			<img src="./images/icon-cart.svg" alt="Cart icon" class="cart__icon">
+			<img src="./images/icons/icon-cart.svg" alt="Cart icon" class="cart__icon">
 			<span class="cart__goods"></span>
 		</button>
 		<button class="avatar">
-			<img src="./images/image-avatar.png" alt="" class="avatar__img">
+			<img src="./images/icons/image-avatar.png" alt="" class="avatar__img">
 		</button>
 
 		<div class="cart-container">
@@ -52,6 +52,74 @@
 	</header>
 	<main>
 		<section>
+			<div class="product-image">
+				<picture class="product-main__image">
+					<img src="./images/products/image-product-1.jpg"
+						alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
+						class="product-image__main--img">
+					<img src="./images/products/image-product-2.jpg"
+						alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
+						class="product-image__main--img">
+					<img src="./images/products/image-product-3.jpg"
+						alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
+						class="product-image__main--img">
+					<img src="./images/products/image-product-4.jpg"
+						alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
+						class="product-image__main--img">
+				</picture>
+				<img src="./images/icons/icon-previous.svg" alt="Previous image icon" class="product-image__arrow-prev">
+				<img src="./images/icons/icon-next.svg" alt="Next image icon" class="product-image__arrow-next">
+
+				<div class="thumbnails">
+					<picture class="thumbnails__minor">
+						<img src="./images/products/image-product-1-thumbnail.jpg"
+							alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
+							class="thumbnails__minor--img">
+					</picture>
+					<picture class="thumbnails__minor">
+						<img src="./images/products/image-product-2-thumbnail.jpg"
+							alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
+							class="thumbnails__minor--img">
+					</picture>
+					<picture class="thumbnails__minor">
+						<img src="./images/products/image-product-3-thumbnail.jpg"
+							alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
+							class="thumbnails__minor--img">
+					</picture>
+					<picture class="thumbnails__minor">
+						<img src="./images/products/image-product-4-thumbnail.jpg"
+							alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
+							class="thumbnails__minor--img">
+					</picture>
+				</div>
+			</div>
+
+			<div class="product-info">
+				<h2 class="product-info__brand">Sneaker company</h2>
+				<h1 class="product-info__heading">Fall limited edition sneakers</h1>
+				<p class="product-info__description">These low-profile sneakers are your perfect casual wear companion.
+					Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+				<span class="product-info__current-price">$125.00</span>
+				<span class="product-info__discount">50%</span>
+				<span class="product-info__general-price">$250.00</span>
+				<div class="selection-box">
+					<button class="selection-box__btn">
+						<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
+							class="selection-box__btn--minus">
+					</button>
+					<span class="selection-box__number">0</span>
+					<button class="selection-box__btn">
+						<img src="./images/icons/icon-plus.svg" alt="Increase product pieces icon"
+							class="selection-box__btn--plus">
+					</button>
+				</div>
+				<button class="product-info__add">
+					<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true"
+						class="product-info__add--cart-icon">
+					<span class="product-info__add--text">Add to cart</span>
+				</button>
+			</div>
+
 		</section>
 	</main>
 	<footer>
