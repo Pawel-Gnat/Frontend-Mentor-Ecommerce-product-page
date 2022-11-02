@@ -51,9 +51,9 @@
 		</div>
 	</header>
 	<main>
-		<section>
+		<section class="product">
 			<div class="product-image">
-				<picture class="product-main__image">
+				<picture class="product-image__main">
 					<img src="./images/products/image-product-1.jpg"
 						alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
 						class="product-image__main--img">
@@ -67,6 +67,7 @@
 						alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
 						class="product-image__main--img">
 				</picture>
+
 				<img src="./images/icons/icon-previous.svg" alt="Previous image icon" class="product-image__arrow-prev">
 				<img src="./images/icons/icon-next.svg" alt="Next image icon" class="product-image__arrow-next">
 
@@ -99,9 +100,13 @@
 				<h1 class="product-info__heading">Fall limited edition sneakers</h1>
 				<p class="product-info__description">These low-profile sneakers are your perfect casual wear companion.
 					Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-				<span class="product-info__current-price">$125.00</span>
-				<span class="product-info__discount">50%</span>
-				<span class="product-info__general-price">$250.00</span>
+
+				<div class="product-info__price">
+					<span class="product-info__price--current">$125.00</span>
+					<span class="product-info__price--discount">50%</span>
+					<span class="product-info__price--general">$250.00</span>
+				</div>
+
 				<div class="selection-box">
 					<button class="selection-box__btn">
 						<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
@@ -113,6 +118,7 @@
 							class="selection-box__btn--plus">
 					</button>
 				</div>
+
 				<button class="product-info__add">
 					<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true"
 						class="product-info__add--cart-icon">

@@ -1,6 +1,8 @@
 /* VARIABLES */
 @import './abstracts/colors';
 @import './layout/header';
+@import './layout/footer';
+@import './pages/product';
 
 /* SITE */
 * {
@@ -17,4 +19,5 @@ html {
 body {
 	font-family: 'Kumbh Sans', sans-serif;
 	min-height: 100vh;
+	background-color: $light-grayish-blue;
 }

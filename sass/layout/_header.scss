@@ -1,9 +1,8 @@
 header {
 	display: flex;
-	gap: 0.5rem;
 	align-items: center;
 	height: 7rem;
-	padding: 2rem;
+	padding: 2rem 1rem;
 }
 
 .mobile {
@@ -22,6 +21,10 @@ header {
 	&__links {
 		display: none;
 	}
+}
+
+.logo {
+	margin-left: 0.5rem;
 }
 
 .desktop {
