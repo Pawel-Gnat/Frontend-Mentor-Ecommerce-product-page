@@ -1,4 +1,36 @@
 /* VARIABLES */
+@-webkit-keyframes showMenu {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes showMenu {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@-webkit-keyframes hideMenu {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes hideMenu {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,10 +39,11 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 7rem;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .mobile__btn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,12 +54,25 @@ header {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  z-index: 2;
 }
 .mobile__btn--close {
   display: none;
 }
 .mobile__links {
-  display: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  height: 100%;
+  width: 65vw;
+  padding: 9.5rem 2.5rem;
+  background-color: hsl(223deg, 64%, 98%);
+  z-index: 1;
+}
+.mobile__links li {
+  margin-bottom: 2.5rem;
 }
 
 .logo {
@@ -62,6 +108,32 @@ header {
 
 .cart-container {
   display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-menu {
+  -webkit-animation: showMenu 0.3s linear 0.1s forwards;
+          animation: showMenu 0.3s linear 0.1s forwards;
+}
+
+.hide-menu {
+  -webkit-animation: hideMenu 0.3s linear forwards;
+          animation: hideMenu 0.3s linear forwards;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  z-index: 1;
 }
 
 footer {
@@ -237,6 +309,7 @@ footer {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
 }
 
 html {
@@ -251,4 +324,8 @@ body {
 
 button {
   font-family: "Kumbh Sans", sans-serif;
+}
+
+a {
+  color: hsl(220deg, 13%, 13%);
 }/*# sourceMappingURL=style.css.map */
