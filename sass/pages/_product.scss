@@ -5,8 +5,6 @@
 
 .product-image {
 	position: relative;
-	// display: flex;
-	// flex-direction: row;
 	width: 100%;
 
 	&__main {
@@ -26,7 +24,6 @@
 	&__arrow-next {
 		position: absolute;
 		display: block;
-		// top: 20%;
 		top: 35vw;
 		height: 4rem;
 		width: 4rem;
@@ -63,14 +60,14 @@
 	&__heading {
 		font-size: 2.6rem;
 		text-transform: capitalize;
-		margin: 1.5rem 0 2rem;
+		margin: 1.5rem 0;
 		color: $very-dark-blue;
 	}
 
 	&__description {
 		font-size: 1.5rem;
 		line-height: 25px;
-		margin-bottom: 2.5rem;
+		margin-bottom: 2rem;
 		color: $dark-grayish-blue;
 	}
 
@@ -100,15 +97,55 @@
 			color: $grayish-blue;
 		}
 	}
+
+	&__add {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		width: 100%;
+		padding: 1.5rem 2rem;
+		border: none;
+		border-radius: 1rem;
+		background-color: $orange;
+		box-shadow: 0px 20px 20px 0px $pale-orange;
+		cursor: pointer;
+
+		&--cart-icon {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(306deg) brightness(103%)
+				contrast(101%);
+		}
+
+		&--text {
+			font-size: 1.6rem;
+			font-weight: 700;
+			color: $white;
+		}
+	}
 }
 
 .selection-box {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	background-color: rgba($grayish-blue, 0.2);
-	padding: 2rem;
-	margin-top: 2rem;
+	padding: 1rem 1.5rem;
+	margin: 2rem 0 1.5rem;
 	border-radius: 1rem;
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	&__number {
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
 }
 
 @media (min-width: 420px) {
