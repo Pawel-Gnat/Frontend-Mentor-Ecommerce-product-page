@@ -47,6 +47,7 @@
 }
 
 .product-info {
+	width: 100%;
 	margin: 2.5rem;
 
 	&__brand {
@@ -140,6 +141,10 @@
 		border: none;
 		background-color: transparent;
 		cursor: pointer;
+
+		img {
+			pointer-events: none;
+		}
 	}
 
 	&__number {

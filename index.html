@@ -16,7 +16,7 @@
 <body>
 	<header>
 		<nav class="mobile">
-			<button class="mobile__btn">
+			<button type="button" aria-label="Open hamburger menu" class="mobile__btn">
 				<img src="./images/icons/icon-menu.svg" alt="Open navigation links menu" class="mobile__btn--menu">
 				<img src="./images/icons/icon-close.svg" alt="Close navigation links menu" class="mobile__btn--close">
 			</button>
@@ -36,20 +36,23 @@
 			<a href="#">About</a>
 			<a href="#">Contact</a>
 		</nav>
-		<button class="cart">
+		<button type="button" aria-label="Show cart" class="cart">
 			<img src="./images/icons/icon-cart.svg" alt="Cart icon" class="cart__icon">
 			<span class="cart__goods"></span>
 		</button>
-		<button class="avatar">
+		<button type="button" aria-label="Show user profile" class="avatar">
 			<img src="./images/icons/image-avatar.png" alt="" class="avatar__img">
 		</button>
 
 		<div class="cart-container">
 			<p class="cart-container__title">Cart</p>
-			<div class="cart-container__storage"></div>
-			<button class="cart-container__checkout">Checkout</button>
+			<div class="cart-container__storage">
+				<p class="cart-container__storage--info">Your cart is empty.</p>
+				<button type="button" class="cart-container__storage--checkout">Checkout</button>
+			</div>
 		</div>
 	</header>
+
 	<main>
 		<section class="product">
 			<div class="product-image">
@@ -108,31 +111,34 @@
 				</div>
 
 				<div class="selection-box">
-					<button class="selection-box__btn">
+					<button type="button" aria-label="Add one product to cart" class="selection-box__btn"
+						data-value="minus">
 						<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
 							class="selection-box__btn--minus">
 					</button>
-					<span class="selection-box__number">0</span>
-					<button class="selection-box__btn">
+					<span class="selection-box__number"></span>
+					<button type="button" aria-label="Remove one product to cart" class="selection-box__btn"
+						data-value="plus">
 						<img src="./images/icons/icon-plus.svg" alt="Increase product pieces icon"
 							class="selection-box__btn--plus">
 					</button>
 				</div>
 
-				<button class="product-info__add">
+				<button type="button" class="product-info__add">
 					<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true"
 						class="product-info__add--cart-icon">
 					<span class="product-info__add--text">Add to cart</span>
 				</button>
 			</div>
-
 		</section>
 	</main>
+
 	<footer>
 		<p class="footer__author">Challenge by <a href="https://www.frontendmentor.io" target="_blank"
 				rel="noopener">Frontend Mentor</a>.
 			Coded by <a href="https://github.com/Pawel-Gnat" target="_blank" rel="noopener">Paweł Gnat</a>.</p>
 	</footer>
+
 	<script type='module' src="./js/main.js"></script>
 </body>
 

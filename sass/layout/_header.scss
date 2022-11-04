@@ -14,7 +14,7 @@ header {
 		border: none;
 		background-color: transparent;
 		cursor: pointer;
-		z-index: 2;
+		z-index: 3;
 
 		&--close {
 			display: none;
@@ -22,7 +22,6 @@ header {
 	}
 
 	&__links {
-		// display: none;
 		font-size: 1.7rem;
 		font-weight: 700;
 		position: absolute;
@@ -32,7 +31,7 @@ header {
 		width: 65vw;
 		padding: 9.5rem 2.5rem;
 		background-color: $light-grayish-blue;
-		z-index: 1;
+		z-index: 2;
 
 		li {
 			margin-bottom: 2.5rem;
@@ -57,6 +56,11 @@ header {
 
 	&__icon {
 		display: block;
+		transition: filter 0.3s;
+	}
+
+	&:hover img {
+		filter: brightness(0) saturate(100%);
 	}
 }
 
@@ -70,11 +74,105 @@ header {
 		display: block;
 		height: 2.2rem;
 		width: auto;
+		border-radius: 50%;
+		transition: border 0.3s;
+	}
+
+	&:hover img {
+		border: 1.5px solid $orange;
 	}
 }
 
 .cart-container {
+	font-size: 1.6rem;
 	display: none;
+	position: absolute;
+	top: 7.5rem;
+	right: 0;
+	width: 95%;
+	max-width: 36rem;
+	margin: 0 0.8rem;
+	border-radius: 1rem;
+	background-color: $light-grayish-blue;
+	z-index: 1;
+
+	&__title {
+		font-weight: 700;
+		padding: 2.5rem;
+		border-bottom: 1px solid rgba($grayish-blue, 0.5);
+	}
+
+	&__storage {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		min-height: 19rem;
+		width: 100%;
+		padding: 2.5rem 2.5rem 3rem;
+		box-shadow: 0px 20px 30px -20px $black-with-75-opacity;
+
+		&--info {
+			font-weight: 700;
+			align-self: center;
+			margin: auto 0;
+			color: $dark-grayish-blue;
+		}
+
+		&--checkout {
+			display: none;
+			font-size: 1.6rem;
+			font-weight: 700;
+			width: 100%;
+			padding: 2rem;
+			border: none;
+			border-radius: 1rem;
+			background-color: $orange;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
+.cart-item {
+	font-size: 1.4rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.5rem;
+	height: 5rem;
+
+	&__image {
+		display: block;
+		height: 5rem;
+		border-radius: 0.5rem;
+		aspect-ratio: 1/1;
+	}
+
+	&__description {
+		color: $dark-grayish-blue;
+		overflow: hidden;
+
+		&--name {
+			margin-bottom: 0.25em;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&--price {
+			font-weight: 700;
+			color: $black-with-75-opacity;
+		}
+	}
+
+	&__delete {
+		display: block;
+		height: 4rem;
+		width: 2.5rem;
+		padding: 1rem;
+		padding-right: 0rem;
+		cursor: pointer;
+	}
 }
 
 .active {
@@ -98,7 +196,7 @@ header {
 	position: absolute;
 	inset: 0;
 	background-color: $black-with-75-opacity;
-	z-index: 1;
+	z-index: 2;
 }
 
 @media (min-width: 420px) {
