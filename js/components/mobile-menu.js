@@ -16,7 +16,7 @@ function showMobileMenu() {
 		mobileLinks.classList.add('hide-menu')
 		openMenuIcon.classList.remove('hidden')
 		closeMenuIcon.classList.remove('active')
-		setTimeout(() => body.classList.remove('background'), 300)
+		setTimeout(() => body.classList.remove('background'), 400)
 	}
 }
 

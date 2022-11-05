@@ -43,20 +43,17 @@ function numberOfProducts(e) {
 }
 
 function handleEmptyCart() {
-	console.log(productsCart.contains(boughtProducts))
-	// console.log(boughtProducts)
-
-	if (productsCart.contains(div)) {
-		// console.log('lol')
+	if (boughtProducts.length > 0) {
 		cartInsideInfo.classList.add('hidden')
 		checkoutBtn.classList.add('active')
+	} else {
+		cartInsideInfo.classList.remove('hidden')
+		checkoutBtn.classList.remove('active')
 	}
 }
 
-// console.log(productsCart.contains(boughtProducts))
-
 function productInsideCart(number) {
-	let price = '$' + `125.00*${number}`
+	let totalPrice = (125 * `${number}`).toFixed(2)
 
 	const newProduct = document.createElement('div')
 	newProduct.className = 'cart-item'
@@ -66,24 +63,49 @@ function productInsideCart(number) {
         
         <div class="cart-item__description">
         <p class="cart-item__description--name">Autumn Limited Edition Sneakers</p>
-        <span class="cart-item__description--pieces">$125.00 x ${number}</span> <span class="cart-item__description--price">${price}</span>
+        <span class="cart-item__description--price">$125.00 x </span>
+		<span class="cart-item__description--pieces">${number}</span> 
+		<span class="cart-item__description--total">$${totalPrice}</span>
         </div>
         
-        <img src="./images/icons/icon-delete.svg" alt="Remove from cart icon" class="cart-item__delete">
+		<button type="button" aria-label="Delete product from cart" class="cart-item__btn">
+        <img src="./images/icons/icon-delete.svg" alt="Remove from cart icon" class="cart-item__btn--delete"></button>
     `
 
 	productsCart.insertBefore(newProduct, checkoutBtn)
 }
 
 function addToCart() {
+	if (boughtProducts.length > 0 && desiredProductPieces.textContent > 0) {
+		let total = document.querySelector('.cart-item__description--total')
+		let pieces = document.querySelector('.cart-item__description--pieces')
+
+		pieces.textContent = Number(pieces.textContent) + Number(desiredProductPieces.textContent)
+
+		let newPieces = Number(pieces.textContent)
+		let newTotal = (125 * newPieces).toFixed(2)
+
+		total.textContent = '$' + newTotal
+
+		desiredProductPieces.textContent = 0
+	}
+
 	if (desiredProductPieces.textContent > 0) {
 		productInsideCart(desiredProductPieces.textContent)
 		desiredProductPieces.textContent = 0
 	}
-
 	handleEmptyCart()
+}
+
+function deleteProductFromCart(e) {
+	if (e.target.closest('button > img')) {
+		let parentElement = e.target.parentElement.parentElement
+		parentElement.remove()
+		handleEmptyCart()
+	}
 }
 
 cartBtn.addEventListener('click', showCart)
 selectionBox.addEventListener('click', e => numberOfProducts(e))
 addToCartBtn.addEventListener('click', addToCart)
+productsCart.addEventListener('click', e => deleteProductFromCart(e))

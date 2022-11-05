@@ -26,7 +26,7 @@ header {
 		font-weight: 700;
 		position: absolute;
 		inset: 0;
-		left: -100%;
+		translate: -100% 0;
 		height: 100%;
 		width: 65vw;
 		padding: 9.5rem 2.5rem;
@@ -159,19 +159,25 @@ header {
 			text-overflow: ellipsis;
 		}
 
-		&--price {
+		&--total {
 			font-weight: 700;
+			margin-left: 0.5rem;
 			color: $black-with-75-opacity;
 		}
 	}
 
-	&__delete {
-		display: block;
-		height: 4rem;
-		width: 2.5rem;
-		padding: 1rem;
-		padding-right: 0rem;
-		cursor: pointer;
+	&__btn {
+		border: none;
+		background-color: transparent;
+
+		&--delete {
+			display: block;
+			height: 4rem;
+			width: 2.5rem;
+			padding: 1rem;
+			padding-right: 0rem;
+			cursor: pointer;
+		}
 	}
 }
 

@@ -1,19 +1,19 @@
 @keyframes showMenu {
 	from {
-		left: -100%;
+		translate: -100% 0;
 	}
 
 	to {
-		left: 0%;
+		translate: 0% 0;
 	}
 }
 
 @keyframes hideMenu {
 	from {
-		left: 0%;
+		translate: 0% 0;
 	}
 
 	to {
-		left: -100%;
+		translate: -100% 0;
 	}
 }
