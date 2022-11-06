@@ -6,24 +6,23 @@
 .product-image {
 	position: relative;
 	width: 100%;
+	aspect-ratio: 5 / 4;
 	overflow: hidden;
 
 	&__main {
-		display: flex;
-		flex-direction: row;
-		// width: 100%;
-		// translate: -100%;
-
 		&--img {
-			min-width: 100%;
+			position: absolute;
+			height: 100%;
+			width: 100%;
 			object-fit: cover;
-			aspect-ratio: 5/4;
+			object-fit: fill;
+			transition: translate 1s;
 		}
 	}
 
 	&__btn {
 		position: absolute;
-		top: 35vw;
+		top: 40%;
 		border: none;
 		background-color: transparent;
 
