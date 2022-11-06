@@ -7,6 +7,7 @@ const productsCart = document.querySelector('.cart-container__storage')
 const addToCartBtn = document.querySelector('.product-info__add')
 const cartInsideInfo = document.querySelector('.cart-container__storage--info')
 const boughtProducts = document.getElementsByClassName('cart-item')
+const quantityOfProducts = document.querySelector('.cart__goods')
 let desiredProductPieces = document.querySelector('.selection-box__number')
 
 function displayNumber(value = 0) {
@@ -21,6 +22,17 @@ function showCart() {
 	} else {
 		cartContainer.classList.remove('active')
 		cartIcon.style.filter = ''
+	}
+}
+
+function showQuantityofProductsInCards() {
+	if (boughtProducts.length > 0) {
+		let pieces = document.querySelector('.cart-item__description--pieces').textContent
+
+		quantityOfProducts.textContent = pieces
+		quantityOfProducts.classList.add('active')
+	} else {
+		quantityOfProducts.classList.remove('active')
 	}
 }
 
@@ -95,6 +107,7 @@ function addToCart() {
 		desiredProductPieces.textContent = 0
 	}
 	handleEmptyCart()
+	showQuantityofProductsInCards()
 }
 
 function deleteProductFromCart(e) {
@@ -102,6 +115,7 @@ function deleteProductFromCart(e) {
 		let parentElement = e.target.parentElement.parentElement
 		parentElement.remove()
 		handleEmptyCart()
+		showQuantityofProductsInCards()
 	}
 }
 

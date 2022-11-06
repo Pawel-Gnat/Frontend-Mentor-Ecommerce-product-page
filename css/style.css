@@ -84,6 +84,7 @@ header {
 }
 
 .cart {
+  position: relative;
   padding: 1rem;
   margin-left: auto;
   border: none;
@@ -100,6 +101,17 @@ header {
 .cart:hover img {
   -webkit-filter: brightness(0) saturate(100%);
           filter: brightness(0) saturate(100%);
+}
+.cart__goods {
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 100vw;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 .avatar {
@@ -146,6 +158,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 2.5rem;
   min-height: 19rem;
   width: 100%;
@@ -165,12 +180,17 @@ header {
   font-size: 1.6rem;
   font-weight: 700;
   width: 100%;
-  padding: 2rem;
+  padding: 1.75rem;
   border: none;
   border-radius: 1rem;
   background-color: hsl(26deg, 100%, 55%);
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.cart-container__storage--checkout:hover {
+  opacity: 0.7;
 }
 
 .cart-item {
@@ -372,6 +392,11 @@ footer {
   -webkit-box-shadow: 0px 20px 20px 0px hsl(25deg, 100%, 94%);
           box-shadow: 0px 20px 20px 0px hsl(25deg, 100%, 94%);
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.product-info__add:hover {
+  opacity: 0.7;
 }
 .product-info__add--cart-icon {
   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(306deg) brightness(103%) contrast(101%);
@@ -409,6 +434,11 @@ footer {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.selection-box__btn:hover {
+  opacity: 0.7;
 }
 .selection-box__btn img {
   pointer-events: none;
