@@ -1,8 +1,11 @@
 header {
 	display: flex;
 	align-items: center;
-	height: 7rem;
-	padding: 2rem 1.5rem;
+	// height: 7rem;
+	width: 100vw;
+	max-width: 111rem;
+	padding: 1.5rem 1.5rem;
+	border-bottom: 1px solid $grayish-blue;
 }
 
 .mobile {
@@ -97,7 +100,6 @@ header {
 }
 
 .cart-container {
-	font-size: 1.6rem;
 	display: none;
 	position: absolute;
 	top: 7.5rem;
@@ -134,7 +136,6 @@ header {
 
 		&--checkout {
 			display: none;
-			font-size: 1.6rem;
 			font-weight: 700;
 			width: 100%;
 			padding: 1.75rem;
@@ -224,5 +225,28 @@ header {
 	z-index: 2;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 768px) {
+	header {
+		padding: 1.5rem 1.5rem clamp(1rem, 3vw, 4rem);
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: block;
+		margin-left: 5rem;
+
+		a {
+			margin-right: clamp(2.5rem, 3vw, 3.5rem);
+			color: $dark-grayish-blue;
+		}
+	}
+}
+
+@media (min-width: 1250px) {
+	header {
+		padding: 1.5rem 0rem 4rem;
+	}
 }

@@ -20,6 +20,10 @@ html {
 
 body {
 	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	min-height: 100vh;
 	background-color: $light-grayish-blue;
 }
@@ -30,4 +34,14 @@ button {
 
 a {
 	color: $very-dark-blue;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	appearance: textfield;
 }

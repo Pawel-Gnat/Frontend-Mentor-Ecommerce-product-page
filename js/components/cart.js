@@ -4,7 +4,7 @@ const cartIcon = cartBtn.querySelector('img')
 const selectionBox = document.querySelector('.selection-box')
 const checkoutBtn = document.querySelector('.cart-container__storage--checkout')
 const productsCart = document.querySelector('.cart-container__storage')
-const addToCartBtn = document.querySelector('.product-info__add')
+const addToCartBtn = document.querySelector('.cart-add')
 const cartInsideInfo = document.querySelector('.cart-container__storage--info')
 const boughtProducts = document.getElementsByClassName('cart-item')
 const quantityOfProducts = document.querySelector('.cart__goods')
@@ -37,20 +37,14 @@ function showQuantityofProductsInCards() {
 }
 
 function numberOfProducts(e) {
-	let number = desiredProductPieces.textContent
-
 	if (e.target.dataset.value == 'minus') {
-		if (number <= 0) {
-			return
-		} else {
-			number--
-			displayNumber(number)
-		}
+		desiredProductPieces.stepDown()
+		displayNumber(desiredProductPieces)
 	}
 
 	if (e.target.dataset.value == 'plus') {
-		number++
-		displayNumber(number)
+		desiredProductPieces.stepUp()
+		displayNumber(desiredProductPieces)
 	}
 }
 
@@ -88,23 +82,22 @@ function productInsideCart(number) {
 }
 
 function addToCart() {
-	if (boughtProducts.length > 0 && desiredProductPieces.textContent > 0) {
+	if (boughtProducts.length > 0 && desiredProductPieces.value > 0) {
 		let total = document.querySelector('.cart-item__description--total')
 		let pieces = document.querySelector('.cart-item__description--pieces')
 
-		pieces.textContent = Number(pieces.textContent) + Number(desiredProductPieces.textContent)
+		pieces.textContent = Number(pieces.textContent) + Number(desiredProductPieces.value)
 
 		let newPieces = Number(pieces.textContent)
 		let newTotal = (125 * newPieces).toFixed(2)
-
 		total.textContent = '$' + newTotal
 
-		desiredProductPieces.textContent = 0
+		desiredProductPieces.value = 0
 	}
 
-	if (desiredProductPieces.textContent > 0) {
-		productInsideCart(desiredProductPieces.textContent)
-		desiredProductPieces.textContent = 0
+	if (desiredProductPieces.value > 0) {
+		productInsideCart(desiredProductPieces.value)
+		desiredProductPieces.value = 0
 	}
 	handleEmptyCart()
 	showQuantityofProductsInCards()

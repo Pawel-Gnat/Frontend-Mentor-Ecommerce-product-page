@@ -56,25 +56,27 @@
 	<main>
 		<section class="product">
 			<div class="product-image">
-				<picture class="product-image__main">
-					<img src="./images/products/image-product-1.jpg"
-						alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
-						class="product-image__main--img">
-					<img src="./images/products/image-product-2.jpg"
-						alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
-						class="product-image__main--img">
-					<img src="./images/products/image-product-3.jpg"
-						alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
-						class="product-image__main--img">
-					<img src="./images/products/image-product-4.jpg"
-						alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
-						class="product-image__main--img">
-				</picture>
+				<div class="lightbox">
+					<picture class="lightbox__main">
+						<img src="./images/products/image-product-1.jpg"
+							alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
+							class="lightbox__main--img">
+						<img src="./images/products/image-product-2.jpg"
+							alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
+							class="lightbox__main--img">
+						<img src="./images/products/image-product-3.jpg"
+							alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
+							class="lightbox__main--img">
+						<img src="./images/products/image-product-4.jpg"
+							alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
+							class="lightbox__main--img">
+					</picture>
 
-				<button type="button" aria-label="Previous image" class="product-image__btn">
-					<img src="./images/icons/icon-previous.svg" alt="" aria-hidden="true"></button>
-				<button type="button" aria-label="Next image" class="product-image__btn">
-					<img src="./images/icons/icon-next.svg" alt="" aria-hidden="true"></button>
+					<button type="button" aria-label="Previous image" class="lightbox__btn">
+						<img src="./images/icons/icon-previous.svg" alt="" aria-hidden="true"></button>
+					<button type="button" aria-label="Next image" class="lightbox__btn">
+						<img src="./images/icons/icon-next.svg" alt="" aria-hidden="true"></button>
+				</div>
 
 				<div class="thumbnails">
 					<picture class="thumbnails__minor">
@@ -112,25 +114,27 @@
 					<span class="product-info__price--general">$250.00</span>
 				</div>
 
-				<div class="selection-box">
-					<button type="button" aria-label="Add one product to cart" class="selection-box__btn"
-						data-value="minus">
-						<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
-							class="selection-box__btn--minus">
-					</button>
-					<span class="selection-box__number"></span>
-					<button type="button" aria-label="Remove one product to cart" class="selection-box__btn"
-						data-value="plus">
-						<img src="./images/icons/icon-plus.svg" alt="Increase product pieces icon"
-							class="selection-box__btn--plus">
-					</button>
-				</div>
+				<form action="" class="product-info__cart">
+					<div class="selection-box">
+						<button type="button" aria-label="Add one product to cart" class="selection-box__btn"
+							data-value="minus">
+							<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
+								class="selection-box__btn--minus">
+						</button>
+						<input type='number' value="0" min="0" step="1" disabled
+							class="selection-box__number"></input>
+						<button type="button" aria-label="Remove one product to cart" class="selection-box__btn"
+							data-value="plus">
+							<img src="./images/icons/icon-plus.svg" alt="Increase product pieces icon"
+								class="selection-box__btn--plus">
+						</button>
+					</div>
 
-				<button type="button" class="product-info__add">
-					<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true"
-						class="product-info__add--cart-icon">
-					<span class="product-info__add--text">Add to cart</span>
-				</button>
+					<button type="button" class="cart-add">
+						<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true" class="cart-add__cart-icon">
+						<span class="cart-add__text">Add to cart</span>
+					</button>
+				</form>
 			</div>
 		</section>
 	</main>

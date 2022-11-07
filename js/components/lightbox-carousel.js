@@ -1,6 +1,6 @@
-const productImages = document.querySelectorAll('.product-image__main > img')
-const [previousImageBtn, nextImageBtn] = document.querySelectorAll('.product-image__btn')
-const productLightbox = document.querySelector('.product-image__main')
+const productImages = document.querySelectorAll('.lightbox__main > img')
+const [previousImageBtn, nextImageBtn] = document.querySelectorAll('.lightbox__btn')
+const productLightbox = document.querySelector('.lightbox__main')
 let currentImage = 0
 
 function showPreviousImage() {
