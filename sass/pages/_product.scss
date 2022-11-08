@@ -174,17 +174,21 @@
 		gap: clamp(2rem, 6vw, 13rem);
 		// poprawic tego gapa potem jak juz bedzie wiecej elementow
 		padding: 0 2rem;
-		margin-top: 9rem;
+		margin: 9rem 0 2rem;
 	}
 
 	.product-image {
 		flex: 1;
+		// width: 50vw;
+		margin: auto;
 	}
 
 	.lightbox {
 		// position: relative;
 		// aspect-ratio: 5 / 4;
 		// overflow: hidden;
+		margin-bottom: 3rem;
+		cursor: pointer;
 
 		&__img {
 			// position: absolute;
@@ -222,7 +226,34 @@
 	}
 
 	.thumbnails {
-		display: block;
+		display: flex;
+		// justify-content: space-between;
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// max-width: 100%;
+		// display: grid;
+		gap: 3rem;
+
+		// flex-direction: row;
+		// flex: 1;
+
+		&__minor {
+			cursor: pointer;
+			// flex: 0 0 20px;
+			// width: 10%;
+			// width: 20px;
+			// aspect-ratio: 1/1;
+			// width: 10%;
+		}
+
+		&__img {
+			// width: 50px;
+			width: 100%;
+			// max-width: 9rem;
+			aspect-ratio: 1/1;
+			border-radius: 1rem;
+			// width: 25%;
+		}
 	}
 
 	.product-info {
