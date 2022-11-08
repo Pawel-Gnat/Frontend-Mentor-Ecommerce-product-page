@@ -1,4 +1,5 @@
 /* VARIABLES */
+@import './components/buttons';
 @import './abstracts/colors';
 @import './abstracts/animations';
 @import './layout/header';
@@ -44,4 +45,12 @@ input[type='number']::-webkit-outer-spin-button {
 
 input[type='number'] {
 	appearance: textfield;
+}
+
+.active {
+	display: block;
+}
+
+.hidden {
+	display: none;
 }

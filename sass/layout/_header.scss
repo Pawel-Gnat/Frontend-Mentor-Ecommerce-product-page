@@ -1,7 +1,6 @@
-header {
+.header {
 	display: flex;
 	align-items: center;
-	// height: 7rem;
 	width: 100vw;
 	max-width: 111rem;
 	padding: 1.5rem 1.5rem;
@@ -14,14 +13,7 @@ header {
 		display: flex;
 		align-items: center;
 		padding: 1rem;
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
 		z-index: 3;
-
-		&--close {
-			display: none;
-		}
 	}
 
 	&__links {
@@ -42,8 +34,35 @@ header {
 	}
 }
 
-.logo {
-	margin-left: 0.5rem;
+.img {
+	&--menu-close {
+		display: none;
+	}
+
+	&--logo {
+		margin-left: 0.5rem;
+	}
+
+	&--cart-icon {
+		display: block;
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: brightness(0) saturate(100%);
+		}
+	}
+
+	&--avatar-icon {
+		display: block;
+		height: 2.2rem;
+		width: auto;
+		border-radius: 50%;
+		transition: border 0.3s;
+
+		&:hover {
+			border: 1.5px solid $orange;
+		}
+	}
 }
 
 .desktop {
@@ -51,20 +70,10 @@ header {
 }
 
 .cart {
-	position: relative;
-	padding: 1rem;
-	margin-left: auto;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-
-	&__icon {
-		display: block;
-		transition: filter 0.3s;
-	}
-
-	&:hover img {
-		filter: brightness(0) saturate(100%);
+	&__btn {
+		position: relative;
+		padding: 1rem;
+		margin-left: auto;
 	}
 
 	&__goods {
@@ -81,21 +90,8 @@ header {
 }
 
 .avatar {
-	padding: 1rem;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-
-	&__img {
-		display: block;
-		height: 2.2rem;
-		width: auto;
-		border-radius: 50%;
-		transition: border 0.3s;
-	}
-
-	&:hover img {
-		border: 1.5px solid $orange;
+	&__btn {
+		padding: 1rem;
 	}
 }
 
@@ -126,29 +122,27 @@ header {
 		width: 100%;
 		padding: 2.5rem 2.5rem 3rem;
 		box-shadow: 0px 20px 30px -20px $black-with-75-opacity;
+	}
 
-		&--info {
-			font-weight: 700;
-			align-self: center;
-			margin: auto 0;
-			color: $dark-grayish-blue;
-		}
+	&__info {
+		font-weight: 700;
+		align-self: center;
+		margin: auto 0;
+		color: $dark-grayish-blue;
+	}
 
-		&--checkout {
-			display: none;
-			font-weight: 700;
-			width: 100%;
-			padding: 1.75rem;
-			border: none;
-			border-radius: 1rem;
-			background-color: $orange;
-			color: $white;
-			cursor: pointer;
-			transition: opacity 0.3s;
+	&__btn {
+		display: none;
+		font-weight: 700;
+		width: 100%;
+		padding: 1.75rem;
+		border-radius: 1rem;
+		background-color: $orange;
+		color: $white;
+		transition: opacity 0.3s;
 
-			&:hover {
-				opacity: 0.7;
-			}
+		&:hover {
+			opacity: 0.7;
 		}
 	}
 }
@@ -171,42 +165,28 @@ header {
 	&__description {
 		color: $dark-grayish-blue;
 		overflow: hidden;
-
-		&--name {
-			margin-bottom: 0.25em;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-
-		&--total {
-			font-weight: 700;
-			margin-left: 0.5rem;
-			color: $black-with-75-opacity;
-		}
 	}
 
-	&__btn {
-		border: none;
-		background-color: transparent;
-
-		&--delete {
-			display: block;
-			height: 4rem;
-			width: 2.5rem;
-			padding: 1rem;
-			padding-right: 0rem;
-			cursor: pointer;
-		}
+	&__name {
+		margin-bottom: 0.25em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
-}
 
-.active {
-	display: block;
-}
+	&__total {
+		font-weight: 700;
+		margin-left: 0.5rem;
+		color: $black-with-75-opacity;
+	}
 
-.hidden {
-	display: none;
+	&__delete-icon {
+		display: block;
+		height: 4rem;
+		width: 2.5rem;
+		padding: 1rem;
+		padding-right: 0rem;
+	}
 }
 
 .show-menu {
@@ -226,7 +206,7 @@ header {
 }
 
 @media (min-width: 768px) {
-	header {
+	.header {
 		padding: 1.5rem 1.5rem clamp(1rem, 3vw, 4rem);
 	}
 
@@ -246,7 +226,7 @@ header {
 }
 
 @media (min-width: 1250px) {
-	header {
+	.header {
 		padding: 1.5rem 0rem 4rem;
 	}
 }

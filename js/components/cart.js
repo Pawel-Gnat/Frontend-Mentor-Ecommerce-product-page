@@ -1,11 +1,11 @@
-const cartBtn = document.querySelector('.cart')
+const cartBtn = document.querySelector('.cart__btn')
 const cartContainer = document.querySelector('.cart-container')
 const cartIcon = cartBtn.querySelector('img')
 const selectionBox = document.querySelector('.selection-box')
-const checkoutBtn = document.querySelector('.cart-container__storage--checkout')
+const checkoutBtn = document.querySelector('.cart-container__btn')
 const productsCart = document.querySelector('.cart-container__storage')
 const addToCartBtn = document.querySelector('.cart-add')
-const cartInsideInfo = document.querySelector('.cart-container__storage--info')
+const cartInsideInfo = document.querySelector('.cart-container__info')
 const boughtProducts = document.getElementsByClassName('cart-item')
 const quantityOfProducts = document.querySelector('.cart__goods')
 let desiredProductPieces = document.querySelector('.selection-box__number')
@@ -27,7 +27,7 @@ function showCart() {
 
 function showQuantityofProductsInCards() {
 	if (boughtProducts.length > 0) {
-		let pieces = document.querySelector('.cart-item__description--pieces').textContent
+		let pieces = document.querySelector('.cart-item__pieces').textContent
 
 		quantityOfProducts.textContent = pieces
 		quantityOfProducts.classList.add('active')
@@ -68,14 +68,14 @@ function productInsideCart(number) {
         <img src="./images/products/image-product-1-thumbnail.jpg" alt="" aria-hidden="true" class="cart-item__image">
         
         <div class="cart-item__description">
-        <p class="cart-item__description--name">Autumn Limited Edition Sneakers</p>
-        <span class="cart-item__description--price">$125.00 x </span>
-		<span class="cart-item__description--pieces">${number}</span> 
-		<span class="cart-item__description--total">$${totalPrice}</span>
+        <p class="cart-item__name">Autumn Limited Edition Sneakers</p>
+        <span class="cart-item__price">$125.00 x </span>
+		<span class="cart-item__pieces">${number}</span> 
+		<span class="cart-item__total">$${totalPrice}</span>
         </div>
         
-		<button type="button" aria-label="Delete product from cart" class="cart-item__btn">
-        <img src="./images/icons/icon-delete.svg" alt="Remove from cart icon" class="cart-item__btn--delete"></button>
+		<button type="button" aria-label="Delete product from cart" class="cart-item__btn btn">
+        <img src="./images/icons/icon-delete.svg" alt="Remove from cart icon" class="cart-item__delete-icon"></button>
     `
 
 	productsCart.insertBefore(newProduct, checkoutBtn)
@@ -83,8 +83,8 @@ function productInsideCart(number) {
 
 function addToCart() {
 	if (boughtProducts.length > 0 && desiredProductPieces.value > 0) {
-		let total = document.querySelector('.cart-item__description--total')
-		let pieces = document.querySelector('.cart-item__description--pieces')
+		let total = document.querySelector('.cart-item__total')
+		let pieces = document.querySelector('.cart-item__pieces')
 
 		pieces.textContent = Number(pieces.textContent) + Number(desiredProductPieces.value)
 

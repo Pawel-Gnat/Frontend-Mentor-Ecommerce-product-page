@@ -14,11 +14,11 @@
 </head>
 
 <body>
-	<header>
+	<header class="header">
 		<nav class="mobile">
-			<button type="button" aria-label="Open hamburger menu" class="mobile__btn">
-				<img src="./images/icons/icon-menu.svg" alt="Open navigation links menu" class="mobile__btn--menu">
-				<img src="./images/icons/icon-close.svg" alt="Close navigation links menu" class="mobile__btn--close">
+			<button type="button" aria-label="Open hamburger menu" class="mobile__btn btn">
+				<img src="./images/icons/icon-menu.svg" alt="Open navigation links menu" class="img--menu-icon">
+				<img src="./images/icons/icon-close.svg" alt="Close navigation links menu" class="img--menu-close">
 			</button>
 			<ul class="mobile__links">
 				<li><a href="#">Collections</a></li>
@@ -28,7 +28,7 @@
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
-		<img src="./images/icons/logo.svg" alt="Sneakers, website logo" class="logo">
+		<img src="./images/icons/logo.svg" alt="Sneakers, website logo" class="img--logo">
 		<nav class="desktop">
 			<a href="#">Collections</a>
 			<a href="#">Men</a>
@@ -36,19 +36,20 @@
 			<a href="#">About</a>
 			<a href="#">Contact</a>
 		</nav>
-		<button type="button" aria-label="Show cart" class="cart">
-			<img src="./images/icons/icon-cart.svg" alt="Cart icon" class="cart__icon">
+		<button type="button" aria-label="Show cart" class="btn cart__btn">
+			<img src="./images/icons/icon-cart.svg" alt="Cart icon" class="img--cart-icon">
 			<span class="cart__goods"></span>
 		</button>
-		<button type="button" aria-label="Show user profile" class="avatar">
-			<img src="./images/icons/image-avatar.png" alt="" class="avatar__img">
+		<button type="button" aria-label="Show user profile" class="btn avatar__btn">
+			<img src="./images/icons/image-avatar.png" alt="" class="
+			img--avatar-icon">
 		</button>
 
 		<div class="cart-container">
 			<p class="cart-container__title">Cart</p>
 			<div class="cart-container__storage">
-				<p class="cart-container__storage--info">Your cart is empty.</p>
-				<button type="button" class="cart-container__storage--checkout">Checkout</button>
+				<p class="cart-container__info">Your cart is empty.</p>
+				<button type="button" class="cart-container__btn  btn">Checkout</button>
 			</div>
 		</div>
 	</header>
@@ -60,22 +61,24 @@
 					<picture class="lightbox__main">
 						<img src="./images/products/image-product-1.jpg"
 							alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
-							class="lightbox__main--img">
+							class="lightbox__img">
 						<img src="./images/products/image-product-2.jpg"
 							alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
-							class="lightbox__main--img">
+							class="lightbox__img">
 						<img src="./images/products/image-product-3.jpg"
 							alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
-							class="lightbox__main--img">
+							class="lightbox__img">
 						<img src="./images/products/image-product-4.jpg"
 							alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
-							class="lightbox__main--img">
+							class="lightbox__img">
 					</picture>
 
-					<button type="button" aria-label="Previous image" class="lightbox__btn">
-						<img src="./images/icons/icon-previous.svg" alt="" aria-hidden="true"></button>
-					<button type="button" aria-label="Next image" class="lightbox__btn">
-						<img src="./images/icons/icon-next.svg" alt="" aria-hidden="true"></button>
+					<button type="button" aria-label="Previous image" class="lightbox__btn btn">
+						<img src="./images/icons/icon-previous.svg" alt="" aria-hidden="true"
+							class="lightbox__arrow"></button>
+					<button type="button" aria-label="Next image" class="lightbox__btn btn">
+						<img src="./images/icons/icon-next.svg" alt="" aria-hidden="true"
+							class="lightbox__arrow"></button>
 				</div>
 
 				<div class="thumbnails">
@@ -109,28 +112,27 @@
 					Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
 
 				<div class="product-info__price">
-					<span class="product-info__price--current">$125.00</span>
-					<span class="product-info__price--discount">50%</span>
-					<span class="product-info__price--general">$250.00</span>
+					<span class="product-info__current">$125.00</span>
+					<span class="product-info__discount">50%</span>
+					<span class="product-info__general">$250.00</span>
 				</div>
 
 				<form action="" class="product-info__cart">
 					<div class="selection-box">
-						<button type="button" aria-label="Add one product to cart" class="selection-box__btn"
+						<button type="button" aria-label="Add one product to cart" class="selection-box__btn btn"
 							data-value="minus">
 							<img src="./images/icons/icon-minus.svg" alt="Decrease product pieces icon"
-								class="selection-box__btn--minus">
+								class="selection-box__minus-icon">
 						</button>
-						<input type='number' value="0" min="0" step="1" disabled
-							class="selection-box__number"></input>
-						<button type="button" aria-label="Remove one product to cart" class="selection-box__btn"
+						<input type='number' value="0" min="0" step="1" disabled class="selection-box__number"></input>
+						<button type="button" aria-label="Remove one product to cart" class="selection-box__btn btn"
 							data-value="plus">
 							<img src="./images/icons/icon-plus.svg" alt="Increase product pieces icon"
-								class="selection-box__btn--plus">
+								class="selection-box__plus-icon">
 						</button>
 					</div>
 
-					<button type="button" class="cart-add">
+					<button type="button" class="cart-add btn">
 						<img src="./images/icons/icon-cart.svg" alt="" aria-hidden="true" class="cart-add__cart-icon">
 						<span class="cart-add__text">Add to cart</span>
 					</button>

@@ -1,8 +1,8 @@
 const mobileBtn = document.querySelector('.mobile__btn')
 const mobileLinks = document.querySelector('.mobile__links')
 const body = document.querySelector('body')
-const openMenuIcon = document.querySelector('.mobile__btn--menu')
-const closeMenuIcon = document.querySelector('.mobile__btn--close')
+const openMenuIcon = document.querySelector('.img--menu-icon')
+const closeMenuIcon = document.querySelector('.img--menu-close')
 
 function showMobileMenu() {
 	if (!mobileLinks.classList.contains('show-menu')) {
