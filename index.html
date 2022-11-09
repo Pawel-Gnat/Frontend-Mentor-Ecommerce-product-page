@@ -61,16 +61,16 @@
 					<picture class="lightbox__main">
 						<img src="./images/products/image-product-1.jpg"
 							alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
-							class="lightbox__img">
+							class="lightbox__img" data-number="1">
 						<img src="./images/products/image-product-2.jpg"
 							alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
-							class="lightbox__img">
+							class="lightbox__img" data-number="2">
 						<img src="./images/products/image-product-3.jpg"
 							alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
-							class="lightbox__img">
+							class="lightbox__img" data-number="3">
 						<img src="./images/products/image-product-4.jpg"
 							alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
-							class="lightbox__img">
+							class="lightbox__img" data-number="4">
 					</picture>
 
 					<button type="button" aria-label="Previous image" class="lightbox__btn btn">
@@ -85,22 +85,22 @@
 					<picture class="thumbnails__minor">
 						<img src="./images/products/image-product-1-thumbnail.jpg"
 							alt="Beige and brown sneakers, one shoe with his smooth sole shown, another standing with his side view."
-							class="thumbnails__img">
+							class="thumbnails__img" data-number="1">
 					</picture>
 					<picture class="thumbnails__minor">
 						<img src="./images/products/image-product-2-thumbnail.jpg"
 							alt="Beige and brown sneakers, one shoe standing with his side view on top of two small rocks. There is a small twig shown on the front."
-							class="thumbnails__img">
+							class="thumbnails__img" data-number="2">
 					</picture>
 					<picture class="thumbnails__minor">
 						<img src="./images/products/image-product-3-thumbnail.jpg"
 							alt="One shoe of beige and brown sneakers standing with his side view on top of two small rocks."
-							class="thumbnails__img">
+							class="thumbnails__img" data-number="3">
 					</picture>
 					<picture class="thumbnails__minor">
 						<img src="./images/products/image-product-4-thumbnail.jpg"
 							alt="One shoe of beige and brown sneakers standing on top of two small rocks, only the heel touches the stones, with his side view shown."
-							class="thumbnails__img">
+							class="thumbnails__img" data-number="4">
 					</picture>
 				</div>
 			</div>
@@ -138,6 +138,14 @@
 					</button>
 				</form>
 			</div>
+
+			<dialog id="modal" class="lightbox-modal">
+				<img src="" alt="" class="lightbox-modal__img">
+				<button type="button" class="lightbox-modal__btn btn" aria-label="Close image"><img
+						src="./images/icons/icon-close.svg" alt="" aria-hidden="true"
+						class="lightbox-modal__close-icon"></button>
+			</dialog>
+
 		</section>
 	</main>
 
