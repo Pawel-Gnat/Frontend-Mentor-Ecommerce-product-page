@@ -4,10 +4,6 @@
 	max-width: 105.5rem;
 }
 
-.product-image {
-	// position: relative;
-}
-
 .lightbox {
 	position: relative;
 	aspect-ratio: 5 / 4;
@@ -62,7 +58,7 @@
 	}
 
 	&__heading {
-		font-size: 2.6rem;
+		font-size: clamp(2.6rem, 5vw, 4.4rem);
 		text-transform: capitalize;
 		margin: 1.5rem 0;
 		color: $very-dark-blue;
@@ -172,87 +168,41 @@
 	.product {
 		flex-direction: row;
 		gap: clamp(2rem, 6vw, 13rem);
-		// poprawic tego gapa potem jak juz bedzie wiecej elementow
 		padding: 0 4.5rem;
 		margin: 9rem 0 2rem;
 	}
 
 	.product-image {
 		flex: 1;
-		// width: 50vw;
 		margin: auto;
 	}
 
 	.lightbox {
-		// position: relative;
-		// aspect-ratio: 5 / 4;
-		// overflow: hidden;
+		aspect-ratio: 1 / 1;
 		margin-bottom: 3rem;
 		cursor: zoom-in;
 
 		&__img {
-			// position: absolute;
-			// height: 100%;
-			// width: 100%;
-			// object-fit: cover;
-			// object-fit: fill;
-			// transition: translate 1s;
 			border-radius: 1.5rem;
 		}
 
 		&__btn {
-			// position: absolute;
-			// top: 50%;
-			// translate: 0 -50%;
 			display: none;
-		}
-
-		// &__btn:nth-of-type(1) {
-		// 	left: 1.5rem;
-		// }
-
-		// &__btn:nth-of-type(2) {
-		// 	right: 1.5rem;
-		// }
-
-		&__arrow {
-			// display: block;
-			// height: 4rem;
-			// width: 4rem;
-			// padding: 1.2rem 1.4rem;
-			// border-radius: 50%;
-			// background-color: #fff;
 		}
 	}
 
 	.thumbnails {
 		display: flex;
-		// justify-content: space-between;
-		// flex-direction: row;
-		// flex-wrap: wrap;
-		// max-width: 100%;
-		// display: grid;
 		gap: 3rem;
-
-		// flex-direction: row;
-		// flex: 1;
 
 		&__minor {
 			cursor: pointer;
-			// flex: 0 0 20px;
-			// width: 10%;
-			// width: 20px;
-			// aspect-ratio: 1/1;
-			// width: 10%;
 		}
 
 		&__img {
-			// width: 50px;
 			width: 100%;
-			// max-width: 9rem;
 			aspect-ratio: 1/1;
 			border-radius: 1rem;
-			// width: 25%;
 			transition: opacity 0.3s;
 
 			&:hover {
@@ -268,129 +218,34 @@
 
 	.product-info {
 		flex: 1;
-		// margin: 2.5rem;
 		margin: 6.5rem 0 8rem;
 
-		&__brand {
-			// font-size: 1.2rem;
-			// text-transform: uppercase;
-			// letter-spacing: 1px;
-			// color: $orange;
-			// opacity: 0.8;
-		}
-
-		&__heading {
-			// font-size: 2.6rem;
-			// text-transform: capitalize;
-			// margin: 1.5rem 0;
-			// color: $very-dark-blue;
-		}
-
-		&__description {
-			// font-size: 1.5rem;
-			// line-height: 25px;
-			// margin-bottom: 2rem;
-			// color: $dark-grayish-blue;
-		}
-
 		&__price {
-			// font-weight: 700;
-			// display: flex;
-			// align-items: center;
 			flex-flow: wrap;
-		}
-
-		&__current {
-			// font-size: 3rem;
-			// color: $very-dark-blue;
-		}
-
-		&__discount {
-			// padding: 0.3rem 0.7rem;
-			// margin-left: 2rem;
-			// border-radius: 0.5rem;
-			// background-color: $pale-orange;
-			// color: $orange;
-			// opacity: 0.8;
 		}
 
 		&__general {
 			display: block;
 			width: 100%;
 			margin-top: 0.5rem;
-			// text-decoration: line-through;
-			// margin-left: auto;
-			// color: $grayish-blue;
 		}
 
 		&__cart {
-			// display: flex;
 			flex-direction: row;
-			// gap: 1.8rem;
-			// margin-top: 2rem;
 		}
 	}
 
 	.selection-box {
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
-		// background-color: rgba($grayish-blue, 0.2);
-		// padding: 1rem 1.5rem;
-		// border-radius: 1rem;
 		width: 40%;
 		margin: 0;
 
-		&__btn {
-			// display: flex;
-			// align-items: center;
-			// padding: 1rem;
-			// transition: opacity 0.3s;
-
-			&:hover {
-				// opacity: 0.7;
-			}
-
-			img {
-				// pointer-events: none;
-			}
-		}
-
 		&__number {
 			font-weight: 700;
-			// width: 100%;
-			// border: none;
-			// background-color: transparent;
-			// text-align: center;
 		}
 	}
 
 	.cart-add {
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
-		// gap: 1rem;
-		// width: 100%;
-		// padding: 1.5rem 2rem;
-		// border-radius: 1rem;
-		// background-color: $orange;
-		// box-shadow: 0px 20px 20px 0px $pale-orange;
-		// transition: opacity 0.3s;
 		width: 60%;
-
-		&:hover {
-			// opacity: 0.7;
-		}
-
-		&__cart-icon {
-			// filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(306deg) brightness(103%)
-			// 	contrast(101%);
-		}
-
-		&__text {
-			// font-weight: 700;
-			// color: $white;
-		}
 	}
 
 	.lightbox-modal {
